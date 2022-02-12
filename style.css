@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#github {
+    position: absolute;
+    bottom: 6px;
+    right: 10px;
+    font-family: none;
+    z-index: 99999;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("assets/bricks.jpg");
+    user-select: none;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: brightness(50%);
+}
+
+#time {
+    color: #ffffff;
+    font-size: 12em;
+    font-weight: 700;
+    animation: flicker 2.5s infinite alternate;
+    
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+        0 0 7px #ffffff,
+        0 0 10px #ffffff,
+        0 0 21px #ffffff,
+        0 0 42px #00FFFF,
+        0 0 82px #00FFFF,
+        0 0 92px #00FFFF,
+        0 0 102px #00FFFF,
+        0 0 151px #00FFFF;
+    }
+  
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+}
